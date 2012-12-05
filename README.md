@@ -1,0 +1,1 @@
+This is tweetScroll, a PHP class for archiving tweets. TweetScroll was built to optimize the process of writing a list of users' tweets to a database for the Twitter search rate limit. Information on tweetScroll's use can be found at http://ufert.se under the "Tweet Scroll Class" menu item at the top of the page.
