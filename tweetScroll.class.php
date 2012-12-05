@@ -5,10 +5,10 @@ class tweet_scroll {
 	** database access constants                                     **
 	** edit these                                                    **
 	******************************************************************/
-	private $dbName = 'eseufert_oohack';
-	private $dbHost = 'localhost';
-	private $dbUser = 'eseufert_oohack';                              
-	private $dbPass = 'oohack';
+	private $dbName = '';
+	private $dbHost = '';
+	private $dbUser = '';                              
+	private $dbPass = '';
 	// private variables
 	private $uniqueTweets;
 	private $duplicateTweets;
