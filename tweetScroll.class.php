@@ -30,18 +30,18 @@ class tweet_scroll {
 		$this->tweets_per_page = 100; //must be <= 100
 		$this->APIURL = 'https://api.twitter.com/1/statuses/user_timeline.json?';
 		//construct the search API url
-    	if (!$include_retweets) {
-    		$this->APIURL .= "&include_rts=false";
-    	} else {
-    		$this->APIURL .= "&include_rts=true";
-    	}
-    
-    	if (!$include_entities) {
-    		$this->APIURL .= "&include_entities=false";
-    	} else {
-    		$this->APIURL .= "&include_entities=true";
-    	}
-    	$this->APIURL .= "&count=" . $this->tweets_per_page;
+	    	if (!$include_retweets) {
+	    		$this->APIURL .= "&include_rts=false";
+	    	} else {
+	    		$this->APIURL .= "&include_rts=true";
+	    	}
+	    
+	    	if (!$include_entities) {
+	    		$this->APIURL .= "&include_entities=false";
+	    	} else {
+	    		$this->APIURL .= "&include_entities=true";
+	    	}
+	    	$this->APIURL .= "&count=" . $this->tweets_per_page;
 	}
 
 	private function dbConnect() {
