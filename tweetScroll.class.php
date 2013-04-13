@@ -168,9 +168,9 @@ class tweet_scroll {
 				exit(); //kill the script
 			}
 			return false;
-    	}
+    		}
 
-    	curl_close($ch);
+    		curl_close($ch);
 		return $tweets;
 	}
   
@@ -213,9 +213,9 @@ class tweet_scroll {
 
 		$link = $this->dbConnect();
 		$tweets = $this->getTweets($username); //gets <= 100 most recent tweets
-										//we'll gather some metadata from one
-										//and create the twitter_user row from that
-										//then we'll insert the tweets from that page
+						       //we'll gather some metadata from one
+						       //and create the twitter_user row from that
+						       //then we'll insert the tweets from that page
 
 		$reference_tweet = $tweets[0]; //most recent tweet
 
@@ -251,13 +251,13 @@ class tweet_scroll {
 		$link = $this->dbConnect();
 
 		$query = "SELECT DISTINCT
-					twitter_users.id as id,
-					twitter_users.username  as username,
-					twitter_users.user_real_name as real_name,
-					twitter_users.user_lang as user_lang,
-					twitter_users.user_location as user_location,
-					twitter_users.url_slug as url_slug,
-					twitter_users.poll_ID as poll_ID
+				twitter_users.id as id,
+				twitter_users.username  as username,
+				twitter_users.user_real_name as real_name,
+				twitter_users.user_lang as user_lang,
+				twitter_users.user_location as user_location,
+				twitter_users.url_slug as url_slug,
+				twitter_users.poll_ID as poll_ID
 				FROM twitter_users
 				WHERE (twitter_users.poll_ID = " . $this->poll_ID . ")
 				ORDER BY twitter_users.username ASC";
