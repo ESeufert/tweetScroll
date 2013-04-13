@@ -9,7 +9,6 @@
 		echo "USER: " . $usernames[$i]->username . ", PollID: " . $usernames[$i]->poll_ID . "<br/>";
 		$ts->scrollTweets($usernames[$i]->username);
 	}
-	//$ts->scrollTweets('IlvesToomas');
 	
 	echo $ts->uniqueTweets() . " tweets added to database.<br/>";
 
